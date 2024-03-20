@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after psedu selector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+            font-family: 'Tilt Prism', cursive;
+        }
+        
+        header::before{
+            background: url('https://source.unsplash.com/random/900×700/?fruits') no-repeat center center/cover;
+            content: "";
+            object-fit: cover;
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            opacity: .5;
+        }
+        .navigation{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            padding: 34px 23px;
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        section{
+            margin: 3px 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+            height: 334px;
+        }
+        p{
+            text-align: center;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        section::before{
+            
+            content: "";
+            position:absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+        h2{
+            text-align: center;
+        }
+        .mg{
+            font-size: 23px;
+        }
+        .gm{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <ul class="navigation">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#contactus">contact us</a>
+                </li>
+                <li>
+                    <a href="#history">History</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to coding world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, aliquam nisi dolores impedit beatae alias quaerat quas, similique repudiandae autem reprehenderit in! Culpa repellat laborum quo, facilis numquam maiores quos excepturi temporibus eos eum.</p>
+    </section>
+</body>
+</html>
